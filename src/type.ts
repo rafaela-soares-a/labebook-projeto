@@ -6,8 +6,25 @@ export enum USER_ROLES {
 
 export interface TokenPayload {
     id: string,
-    name: string, 
-    role: USER_ROLES
+    name: string
+}
+
+export interface UserDB {
+    id: string,
+    name: string,
+    email: string,
+    password: string,
+    role: string,
+    created_at: string
+}
+
+export interface UserModel {
+    id: string,
+    name: string,
+    email: string,
+    password: string,
+    role: string,
+    createdAt: string
 }
 
 export interface PostModel {
@@ -33,20 +50,14 @@ export interface PostDB {
     updated_at: string
 }
 
-export interface UserDB {
-    id: string,
-    name: string,
-    email: string,
-    password: string,
-    role: string,
-    created_at: string
+export interface PostLikesDislikesModel{
+    userId: string,
+    postId: string,
+    like: number
 }
 
-export interface UserModel {
-    id: string,
-    name: string,
-    email: string,
-    password: string,
-    role: string,
-    createdAt: string
+export interface PostLikesDislikesDB{
+    user_id: string,
+    post_id: string,
+    like: number
 }

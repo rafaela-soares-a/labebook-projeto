@@ -79,7 +79,7 @@ export class Post {
         this.creatorName = value
     }
  
-    public toDBModel(): PostDB {
+    public toPostDBModel(): PostDB {
         return {
             id: this.id,
             creator_id: this.createdAt,
